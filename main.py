@@ -3,8 +3,10 @@
 import cgi
 import os
 import webapp2
+import json
 
 from google.appengine.ext.webapp import template
+from google.appengine.api import mail
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -50,6 +52,24 @@ class PostPage(webapp2.RequestHandler):
 			self.response.headers['Content-Type'] = 'text/plain'
 			self.response.write('Error al encontrar el post')
 
+class SendMail(webapp2.RequestHandler):
+	def post(self):
+		data = json.loads(self.request.body)
+
+		if not mail.is_email_valid(data['sender']):
+			self.response.out.write(json.dumps('{sucess:false,error:"El correo es incorrecto"}'))       	
+		else:
+			sender_address = data['sender']
+			subject = 'contacto'
+			body = data['body_mail'] + data['name']
+			user_address = 'libresystem@gmail.com'
+
+			mail.send_mail(sender_address, user_address, subject, body)	
+
+			self.response.out.write(json.dumps('{"success":true, "msg":"El correo se ha enviado"}'))   
+    	    	
+
+
 class NotFoundPageHandler(webapp2.RequestHandler):
 	"""docstring for Error"""
 	def get(self):
@@ -64,5 +84,6 @@ app = webapp2.WSGIApplication([('/', MainPage),
 								('/servicios', ServiciosPage),
 								('/quienessomos', SobremiPage),
 								('/post\/?([a-z_]*)', PostPage),
+								('/sendmail', SendMail),
 							    ('/.*', NotFoundPageHandler)],
                                   debug=True)

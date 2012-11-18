@@ -331,7 +331,7 @@
           </nav>
           </header>
           <div id="contenido">
-          		<form action="php/enviamail.php" method="post">  <!-- Formulario script php -->
+          		<form id="form-contacto" onSubmit="return false;">  <!-- Formulario script php -->
                 	<p align="center">Contactanos para tener el gusto de atenderte</p>
                     
                     
@@ -342,7 +342,7 @@
                                 <p style="text-align:right;">Introduce tu nombre</p>
                             </td>
                             <td width="50%">
-                            	<input type="text" width="100%" required name="nombre"/>
+                            	<input type="text" width="100%" required name="name"/>
                             </td>
                         </tr>
                         <tr>
@@ -350,7 +350,7 @@
                             	<p style="text-align:right;">Introduce tu email</p>
                             </td>
                             <td>
-                            	<input type="email" width="100%" value="ejemplo: usuario@dominio.com" name="email" />
+                            	<input type="email" width="100%" placeholder="usuario@dominio.com" name="sender" />
                             </td>
                         </tr>
                         <tr>
@@ -358,14 +358,14 @@
                               <p style="text-align:right;">Escribe tu mensaje</p>
                             </td>
                             <td>
-                            	<textarea cols="40" rows="6" name="mensaje"></textarea>
+                            	<textarea cols="40" rows="6" name="body_mail"></textarea>
                             </td>
                         </tr>                    
                         <tr>
                         	<td>
                             </td>
                             <td>
-                             	<input type="submit" value="Enviar" >
+                             	<input type="button" id="btn-enviar" value="Enviar" >
                             </td>
                         </tr>   
                                        
@@ -480,5 +480,8 @@
 	
 	
 </script>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/main.js"></script>
 
 
