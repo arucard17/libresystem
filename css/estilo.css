@@ -93,7 +93,7 @@ canvas{
 body{  /* Maqueto el body */
 
     text-align:center;  /* lo alineo al centro */
-	margin:8px;   /* con un margen de 8 pixeles */
+	margin: 8px 0px 0px 0px;   /* con un margen de 8 pixeles */
 	background:lightgray;  /* con un color gris clarito */
 	background:url('../img/negro.png'),url('../img/azul.png'),url('../img/fondo.jpg'); /* ubicacion de  las imagenes de fondo para darle una bonita textura*/
 	}

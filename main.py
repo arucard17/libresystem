@@ -56,17 +56,20 @@ class SendMail(webapp2.RequestHandler):
 	def post(self):
 		data = json.loads(self.request.body)
 
-		if not mail.is_email_valid(data['sender']):
-			self.response.out.write(json.dumps('{sucess:false,error:"El correo es incorrecto"}'))       	
-		else:
-			sender_address = data['sender']
-			subject = 'contacto'
-			body = data['body_mail'] + data['name']
-			user_address = 'libresystem@gmail.com'
+		sender_address = 'libresystem@gmail.com'
+		subject = 'contacto'
+		body = data['body_mail'] + """ 
 
-			mail.send_mail(sender_address, user_address, subject, body)	
 
-			self.response.out.write(json.dumps('{"success":true, "msg":"El correo se ha enviado"}'))   
+Nombre usuario: """ + data['name'] +"""
+
+Correo usuario: """+ data['sender']
+
+		user_address = sender_address
+
+		mail.send_mail(sender_address, user_address, subject, body)	
+
+		self.response.out.write(json.dumps('{"success":true, "msg":"El correo se ha enviado"}'))   
     	    	
 
 
