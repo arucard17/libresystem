@@ -1,0 +1,30 @@
+application: libresystem
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+- url: /css/(.*\.css)
+  static_files: css/\1
+  upload: /css/(.*\.css)
+
+- url: /photo/(.*\.png)
+  static_files: photo/\1
+  upload: /photo/(.*\.png)
+
+- url: /tmpl/(.*\.html)
+  static_files: tmpl/\1
+  upload: /tmpl/(.*\.html)
+
+- url: /js/(.*\.js)
+  static_files: js/\1
+  upload: /js/(.*\.js)
+
+- url: /img/(.*\.(gif|png|jpg))
+  static_files: img/\1
+  upload: /img/(.*\.(gif|png|jpg))
+
+- url: /.*
+  script: main.app

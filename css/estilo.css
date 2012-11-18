@@ -312,7 +312,7 @@ font-size:20px; /* tamaño de la letra 20 pixeles */
 color:white; /* letra de color blanco */
 text-align:left; /* texto alineado a la izquierda */
 
-background:url('../photo/libresystem.jpg'); /* ubicacion de la foto */
+background:url('../photo/libresystem.png'); /* ubicacion de la foto */
 background-size:100% 100%; /* tamaño de la foto 100% en x y 100% en y */
 background-repeat:no-repeat; /* no repetir la foto */
 display:box;
