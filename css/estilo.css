@@ -1,0 +1,514 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fuentes Personalizadas */
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:700); /* url de las webfonts de google */
+	
+	/* Estilos Básicos */
+	
+	h1,h2,h3,h4,h5,h6{
+		font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+		text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+		}
+		
+	h1,h2{
+		transform:translate(150px,0px); /* translado los titulos h1 y h1 a 150 px en x y 0px en y */
+		-webkit-transform:translate(150px,0px); /* compatibilidad con webkit */
+		-o-transform:translate(150px,0px); /* compatibilidad opera */
+		-moz-transform:translate(150px,0px); /* compatibilidad mozilla */
+		position:absolute;  /* posición relativa */
+		color:white; /* color blanco */ 
+		font-size:20px; /* fuente de 20 pixeles */
+		top:0px;  /* margen con respecto al nivel superior de -20 por ciento */
+		left:-40px;
+		margin-top:10px; /* margen superior de 10px */
+		letter-spacing:0px; /* espaciado entre letras de 0 pixeles */
+		display:inline;
+		text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+			}
+		
+@import url(http://fonts.googleapis.com/css?family=Ubuntu); /* url de las webfonts de google */
+	p{
+		font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+		text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+		}
+		
+
+/* Menu de Navegación  */
+
+nav{
+	display:inline;
+	float:right;
+	margin-right:10px;
+	}
+
+nav ul{    /* para la lista no ordenada */
+	font-size:12px;
+	padding-left:0px;
+	margin-right:0px;
+	background-color:gray;
+	color:white;
+	width:50%;
+	font-family: 'Ubuntu', sans-serif;
+	position:relative;
+	display:inline;
+	}
+	
+nav ul li{ /* maquetamos cada uno de los li que se encuentra en la lista */
+	display:inline;
+	text-align:center;
+	}
+
+nav ul li a{ /* maquetamos los hipervinculos  */
+	background:gray;
+	color:white;
+	text-decoration:none; /* la decoración del texto y ponemos none asi eliminamos los puntos de la lista */
+	float:right;  /* flotación hacia la derecha */
+	border:1px solid white;  /* borde blanco */
+	border-radius:0px 10px 0px 10px;  /* borde redondeado */
+	-moz-border-radius:0px 10px 0px 10px;  /* compatibilidad con mozilla */
+	-webkit-border-radius:0px 10px 0px 10px; /* compatbilidad con webkit */
+	-o-border-radius:0px 10px 0px 10px; /* compatibilidad con opera */
+	box-shadow:0px 0px 5px white; /* efecto resplandor mas que sombra */
+    width:80px; /* anchura del canvas y el texto se pone abajo del icono */ 
+	}
+	
+nav ul li a:hover{ /* Comportamiento cuando pulsemos el hipervinculo o cualquiera de los botones */
+	background:white;  /* color blanco */
+	color:black; /* color negro en la tipografia o letra*/
+	box-shadow:0px 0px 25px white; /* resplandor como una sombra  blanco */
+	-webkit-box-shadow:0px 0px 25px white; /* compatibilidad con webkit */
+	-o-box-shadow:0px 0px 25px white; /* compatibilidad opera */
+    -moz-box-shadow:0px 0px 25px white; /* compatibilidad mozilla */ 
+	}
+	
+canvas{
+	border:0px solid white;	/* borde solido blanco para el cuadro canvas */
+	}
+	
+	
+/* Maquetación Principal */
+
+body{  /* Maqueto el body */
+
+    text-align:center;  /* lo alineo al centro */
+	margin:8px;   /* con un margen de 8 pixeles */
+	background:lightgray;  /* con un color gris clarito */
+	background:url('../img/negro.png'),url('../img/azul.png'),url('../img/fondo.jpg'); /* ubicacion de  las imagenes de fondo para darle una bonita textura*/
+	}
+	
+#Principal{   /* Maqueto el div id="Principal" */
+	text-align:left; /* texto alineado a la izquierda de momento */
+	margin:auto; /* todo el contenido automáticamente se centrará en la pantalla */
+	width:80%; /* ancho */
+	height:100%; /* alto */
+	/* background:gray;  color gris */
+	position:relative; /* posición relativa */
+	background:rgba(255,255,255,0.5); /* transparencia */
+	}
+	
+#cajaheader{  /* Maqueto el div id="cajaheader" */
+	width:100%;
+	height:100px;
+	position:absolute;  /* posició absoluta */
+	background:rgba(255,255,255,0.5); /* color semitransparente saldra una barra detras del div principal  */
+	}
+
+header{  /* Maqueto el header todo se desordena la letra todo */
+	display:table; /* aumenta compatibilidad con navegadores basados en mozilla u opera */
+	margin:auto;
+	text-align:left;
+	width:100%;
+	height:100px;
+	/* background:darkgray; lo pongo en comentario para que la opacidad se vea detras de la caja header */  
+	overflow:hidden;  /*  para ocultar la desordenacion pero se pierden alguno parámetros */
+	
+	border:2px solid white; /* borde del header de color blanco */
+	
+	border-radius:5px 35px 0px 0px; /* borde redondeado arriba */
+	-moz-border-radius:5px 35px 0px 0px;  /* compatibilidad con mozilla */
+	-webkit-border-radius:5px 35px 0px 0px;  /* compatibilidad con webkit */
+	-o-border-radius:5px 35px 0px 0px;       /* compatibilidad con opera */
+	
+	box-shadow:0px 0px 10px white;
+	-moz-box-shadow:0px 0px 10px white;
+	-webkit-box-shadow:0px 0px 10px white;
+	-o-box-shadow:0px 0px 10px white;
+	
+	}
+	
+#logo{
+	width:100px;
+	height:100px;
+	display:inline;
+	position:relative;
+	
+	}
+	
+	
+	
+footer{
+	display:table;    /* aumenta compatibilidad con navegadores basados en mozilla u opera */
+	margin:auto;
+	text-align:center;
+	width:100%;
+	background:darkgray;
+	border:2px solid white; /* borde blanco en el pie de página o footer */
+	border radius:0px 0px 5px 35px;  /* borde redondeado en el pie de paágina o footer */
+	-moz-border radius:0px 0px 5px 35px; /* compatibilidad con mozilla */
+	-webkit-border radius:0px 0px 5px 35px; /* compatibilidad con webkit */
+	-o-border radius:0px 0px 5px 35px;  /* compatibilidad con opera */
+	
+	box-shadow:0px 0px 10px white; /* sombra al lado de la parte redondeada */
+	-moz-box-shadow:0px 0px 10px white;
+	-webkit-box-shadow:0px 0px 10px white;
+	-o-box-shadow:0px 0px 10px white;
+	
+	}	
+	
+	
+/* Contenido */
+
+#contenido{   /* el id="contenido" ocupa el 100% */
+	width:100%;
+    border:2px solid white;
+	
+	box-shadow:0px 0px 10px white; /* sombra al lado de la parte redondeada */
+	-moz-box-shadow:0px 0px 10px white;
+	-webkit-box-shadow:0px 0px 10px white;
+	-o-box-shadow:0px 0px 10px white;
+	
+	}
+	
+article{   /* los articulos ocupan un 50% */
+	width:75%;
+	/* background:white; */
+	background:rgba(255,255,255,0); /* que pase de transparente a un color blanco de fondo */ 
+	margin:10px; /* margen de 10 pixeles entre articulo y articulo */
+	height:100%;
+	display:table; /* para compatibilidad con mozilla y opera */
+	border:1px solid white;
+	border-radius:0px 25px 0px 25px; /* borde redondeado */
+	-webkit-border-radius:0px 25px 0px 25px; /* compatibilidad con webkit */
+    -o-border-radius:0px 25px 0px 25px; /* compatibilidad opera */
+	-moz-border-radius:0px 25px 0px 25px; /* compatibilidad mozilla */ 
+	box-shadow:3px 3px 10px black; /* sombra o resplandor */
+	-webkit-box-shadow:3px 3px 10px black; /* compatibilidad webkit */
+	-o-box-shadow:3px 3px 10px black; /* compatibilidad opera */
+	-moz-box-shadow:3px 3px 10px black; /* compatibilidad mozilla */ 
+	padding:10px 10px 10px 150px; /* espacio entre el margen y el articulo que publico */
+	opacity:0.5; /* opacidad se ve transparente */
+	transition:opacity 1s, box-shadow 1s, transform 1s, background 1s; /* transicion de la opacidad cambia poco a poco 1 segundo y de igual manera la sombra, y la transicion a escala 1 segundo crece el articulo al pasar el raton */
+	-webkit-transition:opacity 1s, -webkit-box-shadow 1s, -webkit-transform 1s, background 1s;  /* compatibilidad webkit */
+	-o-transition:opacity 1s, box-shadow 1s, transform 1s, background 1s; /* compatibilidad opera */
+	-moz-transition:opacity 1s, box-shadow 1s, transform 1s, background 1s; /* compatibilidad mozilla */ 
+	transform:scale(1,1); /* transicion a escala efecto mas grande */
+	-webkit-transform:scale(1,1); /* compatibilidad webkit */
+	-o-transform:scale(1,1); /* compatibilidad opera */
+	-moz-transform:scale(1,1); /* compatibilidad mozilla */
+	}
+
+article:hover{ /* comportamiento cuando pasemos el mouse por los articulos se volveran opacos */
+	background:rgba(255,255,255,1); /* comportamiento de transparente a blanco de fondo */
+	opacity:1;
+	transform:scale(1.1,1.1); /* efecto mas grande en el articulo */
+	-webkit-transform:scale(1.1,1.1); /* compatibilidad webkit */ 
+	-o-transform:scale(1.1,1.1); /* compatibilidad opera */
+	-moz-transform:scale(1.1,1.1); /* compatibilidad mozilla */
+	}	
+ 
+time{  /* maqueto las fechas de los articulos */
+	font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+	font-size:10px;
+	}
+	
+article:hover{  /* cuando el mouse pase por enzima del articulo que pase los siguiente: */
+	box-shadow:0px 0px 25px white; /* caja que pasará de por defecto tener una sombra a tener un resplandor blanco */
+	-webkit-box-shadow:0px 0px 25px white; /* compatibilidad con webkit */
+	-o-box-shadow:0px 0px 25px white; /* compatibilidad opera */
+	-moz-box-shadow:0px 0px 25px white; /* compatibilidad mozilla */
+	
+	}
+
+aside{   /* los contenidos tangenciales en este caso los post previos ocupan un 40% */
+	float:right;
+	display:inline-table;
+	width:20%;
+	
+	margin:10px; /* margen de 10 pixeles */
+	padding:10px;
+	border:1px solid white; /* borde de 1 pixel blanco */
+	border-radius:0px 25px 0px 25px; /* borde redondeado */
+	-webkit-border-radius:0px 25px 0px 25px; /* compatibilidad con navegadores webkit */
+    -o-border-radius:0px 25px 0px 25px; /* compatibilidad opera */
+	-moz-border-radius:0px 25px 0px 25px; /* compatibilidad mozilla */
+	box-shadow:3px 3px 10px black; /* sombra */
+	-webkit-box-shadow:3px 3px 10px black;	/* compatibilidad webkit */
+	-o-box-shadow:3px 3px 10px black; /* compatibilidad opera */
+	-moz-box-shadow:3px 3px 10px black; /* compatibilidad mozilla */
+	
+	}
+	
+aside ul{ /* para la lista no ordenada */
+	width:100%;
+	height:100%;
+	padding-left:0;
+	padding-right:0;
+	color:white;
+	float:left;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:10px;
+	text-decoration:none; /* para quitar el subrayado */
+	list-style:none; /* quito los puntos blancos de la lista no ordenada */
+	}
+	
+
+aside ul li{ /* estilizo cada uno de los elementos de la lista no ordenada */
+	width:100%; 
+	text-decoration:none; /* elimino los puntos de la lista no ordenada */
+	border:1px solid white; /* borde solido de un pixel blanco */
+	border-radius:0px 5px 0px 5px; /* borde redondeado */
+	-webkit-border-radius:0px 5px 0px 5px; /* compatibilidad con webkit */
+	-o-border-radius:0px 5px 0px 5px; /* compatibilidad opera */
+	-moz-border-radius:0px 5px 0px 5px; /* compatibilidad mozilla */
+	text-decoration:none; /* para quitar el subrayado */
+	
+	}
+
+aside ul li a{ /* estilizo de la lista no ordenada aquellos que son enlaces */
+	width:100%;
+	height:30px;
+	overflow:hidden; /* si se sale de la caja el texto lo escondo */
+	text-decoration:none; /* para quitar el subrayado */
+	
+	
+	}
+
+#sobremi{
+	width:100%;
+	height:120px;
+	background:blue;
+	color:white; /* color del texto blanco */
+	display:table; /* para compatibilidad */
+	background:black;
+	font-size:13px; /* tamaño de 10px */
+	text-decoration:none; /* le quito la decoracion o el subrayado */
+	text-align:justify; /* alineado justificado */
+	overflow:hidden; /* para que el texto no sobresalga en caso de reducir el navegador */
+	
+}
+	
+#sobremi a{ /* estilizo el hipervinculo o enlace */
+	color:white; /* color de la letra blanco */
+	text-decoration:none; /* quito el subrayado o la decoracion  */
+	}
+	
+#mifoto{ /* estilizo el div id="mifoto" */
+width:100px;
+height:100px;
+font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+font-size:20px; /* tamaño de la letra 20 pixeles */
+color:white; /* letra de color blanco */
+text-align:left; /* texto alineado a la izquierda */
+
+background:url('../photo/libresystem.jpg'); /* ubicacion de la foto */
+background-size:100% 100%; /* tamaño de la foto 100% en x y 100% en y */
+background-repeat:no-repeat; /* no repetir la foto */
+display:box;
+
+border:1px solid white; /* borde de 1 pixel blanco */
+border-radius:0px 10px 0px 10px; /* borde redondeado */
+-webkit-border-radius:0px 10px 0px 10px; /* compatibilidad con webkit */ 
+-o-border-radius:0px 10px 0px 10px; /* compatibilidad opera */
+-moz-border-radius:0px 10px 0px 10px; /* compatibilidad mozilla */
+box-shadow:0px 0px 10px white; /* sombra o resplandor blanco */
+-webkit-box-shadow:0px 0px 10px white;  /* compatibilidad con webkit */
+-o-box-shadow:0px 0px 10px white; /* compatibilidad opera */
+-moz-box-shadow:0px 0px 10px white; /* compatibilidad mozilla */
+float:left;
+margin:10px;  /* estos dos float y margin para alinear el texto con la foto */
+animation:parpadeo 5s; /* animación sobre la foto 1 segundo */
+-webkit-animation:parpadeo 5s; /* compatibilidad con webkit */
+-o-animation:parpadeo 5s; /* compatibilidad opera */
+-moz-animation:parpadeo 5s; /* compatibilidad mozilla */
+animation-iteration-count:infinite; /* animación infinita */
+-webkit-animation-iteration-count:infinite; /* compatibilidad con webkit */
+-o-animation-iteration-count:infinite; /* compatibilidad opera */
+-moz-animation-iteration-count:infinite; /* compatibilidad mozilla */
+}
+
+@keyframes parpadeo{ /* defino que es lo que pasa en la animación */
+	
+	0% {box-shadow:0px 0px 10px white; }
+	50% {box-shadow:0px 0px 50px white; }
+	100%{box-shadow:0px 0px 10px white; }
+	}
+	
+
+@-webkit-keyframes parpadeo{ /* defino que es lo que pasa en la animación COMPATIBILIDAD WEBKIT*/
+	
+	0% {-webkit-box-shadow:0px 0px 10px white; }
+	50% {-webkit-box-shadow:0px 0px 50px white; }
+	100%{-webkit-box-shadow:0px 0px 10px white; }
+	}
+	
+	
+#logosoftwarelibre{ /* estilizo el div id="logoprogramacion" */
+width:100px;
+height:100px;
+font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+font-size:20px; /* tamaño de la letra 20 pixeles */
+color:white; /* letra de color blanco */
+text-align:left; /* texto alineado a la izquierda */
+
+background:url('../photo/softwarelibre.png'); /* ubicacion de la foto */
+background-size:100% 100%; /* tamaño de la foto 100% en x y 100% en y */
+background-repeat:no-repeat; /* no repetir la foto */
+display:box;
+
+border:1px solid white; /* borde de 1 pixel blanco */
+border-radius:0px 10px 0px 10px; /* borde redondeado */
+-webkit-border-radius:0px 10px 0px 10px; /* compatibilidad con webkit */ 
+-o-border-radius:0px 10px 0px 10px;  /* compatibilidad opera */
+-moz-border-radius:0px 10px 0px 10px; /* compatibilidad mozilla */
+box-shadow:0px 0px 10px white; /* sombra o resplandor blanco */
+-webkit-box-shadow:0px 0px 10px white;  /* compatibilidad con webkit */
+-o-box-shadow:0px 0px 10px white; /* compatibilidad opera */
+-moz-box-shadow:0px 0px 10px white; /* compatibilidad mozilla */
+float:left;
+margin:10px;  /* estos dos float y margin para alinear el texto con la foto */
+	
+position:absolute; /* acomodo la foto y la posición del texto;¿ */
+transform:translate(-140px,0px); /* translado el logo */
+-webkit-transform:translate(-140px,0px);
+-o-transform:translate(-140px,0px); /* compatibilidad opera */
+-moz-transform:translate(-140px,0px); /* compatibilidad mozilla */
+	}
+	
+#ubuntu1204{ /* estilizo el div id="ubuntu1204" */
+width:100px;
+height:100px;
+font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+font-size:20px; /* tamaño de la letra 20 pixeles */
+color:white; /* letra de color blanco */
+text-align:left; /* texto alineado a la izquierda */
+
+background:url('../photo/softwarelibre4.png'); /* ubicacion de la foto */
+background-size:100% 100%; /* tamaño de la foto 100% en x y 100% en y */
+background-repeat:no-repeat; /* no repetir la foto */
+display:box;
+
+border:1px solid white; /* borde de 1 pixel blanco */
+border-radius:0px 10px 0px 10px; /* borde redondeado */
+-webkit-border-radius:0px 10px 0px 10px; /* compatibilidad con webkit */ 
+-o-border-radius:0px 10px 0px 10px; /* compatibiliad opera */
+-moz-border-radius:0px 10px 0px 10px; /* compatibilidad mozilla */
+box-shadow:0px 0px 10px white; /* sombra o resplandor blanco */
+-o-box-shadow:0px 0px 10px white; /* compatibilidad opera */
+-webkit-box-shadow:0px 0px 10px white; /* compatibilidad webkit */
+-moz-box-shadow:0px 0px 10px white; /* compatibilidad mozilla */
+float:left;
+margin:10px;  /* estos dos float y margin para alinear el texto con la foto */
+
+position:absolute; /* acomodo la foto y la posición del texto;¿ */
+transform:translate(-140px,0px); /* translado el logo */
+-webkit-transform:translate(-140px,0px);
+-o-transform:translate(-140px,0px); /* compatibilidad opera */
+-moz-transform:translate(-140px,0px); /* compatibilidad mozilla */
+	}
+	
+#libreoffice{ /* estilizo el div id="mifoto" */
+width:100px;
+height:100px;
+font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+font-size:20px; /* tamaño de la letra 20 pixeles */
+color:white; /* letra de color blanco */
+text-align:left; /* texto alineado a la izquierda */
+
+background:url('../photo/libreoffice.png'); /* ubicacion de la foto */
+background-size:100% 100%; /* tamaño de la foto 100% en x y 100% en y */
+background-repeat:no-repeat; /* no repetir la foto */
+display:box;
+
+border:1px solid white; /* borde de 1 pixel blanco */
+border-radius:0px 10px 0px 10px; /* borde redondeado */
+-webkit-border-radius:0px 10px 0px 10px; /* compatibilidad con webkit */ 
+-o-border-radius:0px 10px 0px 10px; /* compatibilidad con opera */
+-moz-border-radius:0px 10px 0px 10px; /* compatibilidad con mozilla */
+box-shadow:0px 0px 10px white; /* sombra o resplandor blanco */
+-webkit-box-shadow:0px 0px 10px white;  /* compatibilidad con webkit */
+-o-box-shadow:0px 0px 10px white; /* compatibilidad con opera */
+-moz-box-shadow:0px 0px 10px white;  /* comptabilidad con mozilla */
+float:left;
+margin:10px;  /* estos dos float y margin para alinear el texto con la foto */
+	
+position:absolute; /* acomodo la foto y la posición del texto;¿ */
+transform:translate(-140px,0px); /* translado el logo */
+-webkit-transform:translate(-140px,0px); /* compatibilidad webkit */
+-o-transform:translate(-140px,0px); /* compatibilidad opera */
+-moz-transform:translate(-140px,0px); /* compatibilidad mozilla */
+	}
+
+/* Estilos para el formulario */
+
+[required]{
+	border-color:green; /* color del borde verde */
+	box-shadow:0px 0px 5px green;  /* sombra o esplendor verde */
+	-webkit-box-shadow:0px 0px 5px green; /* compatibilidad webkit */
+	-o-box-shadow:0px 0px 5px green; /* compatibilidad opera */
+	-moz-box-shadow:0px 0px 5px green; /* comptabilidad mozilla */
+	}
+
+:invalid{ /* cuando un texto se ha rellenado de manera inválida */
+	border-color:red; /* borde de color rojo en el campo de texto */
+	box-shadow:0px 0px 50px red; /* sombra o esplendor rojo en el campo de texto */
+	-webkit-box-shadow:0px 0px 50px red; /* compatibilidad webkit */
+	-o-box-shadow:0px 0px 50px red; /* compatibilidad opera */
+	-moz-box-shadow:0px 0px 50px red; /* compatibilidad mozilla */
+	}
+form table{ /* estilizo la tabla */
+	width:100%;
+	border:0px solid white;
+	padding:0px;
+	margin:auto;
+	}
+
+form{ /* estilizo el formulario */
+	font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+	color:black; /* letra de color negro */
+	text-shadow:3px 3px 5px rgba(0,0,0,0.5); /* sombra del texto */
+	border:1px solid white; /* borde de la caja de texto de 1 pixel solido blanco */
+	border-radius:0px 15px 0px 15px; /* borde redondeado de la caja de texto */
+	-webkit-border-radius:0px 15px 0px 15px; /* compatbilidad webkit */
+	-o-border-radius:0px 15px 0px 15px; /* compatibilidad con opera */
+	-moz-border-radius:0px 15px 0px 15px; /* compatibilidad con mozilla */
+	box-shadow:10px 10px 25px rgba(0,0,0,0.5); /* sombra de la caja */
+	-webkit-box-shadow:10px 10px 25px rgba(0,0,0,0.5); /* compatibilidad webkit */
+	-o-box-shadow:10px 10px 25px rgba(0,0,0,0.5); /* compatibilidad opera */
+	-moz-box-shadow:10px 10px 25px rgba(0,0,0,0.5); /* compatibilidad mozilla */
+	background:rgba(255,255,255,0.5); /* color blanco con transparencia */
+	margin:auto; /* margen automático */
+	width:80%;  /* margen del 80% para que no ocupe toda la caja */
+	padding:10px;
+	
+	}
+
+
+form input , form textarea{  /* estilizo los input y los textarea del formulario */
+	font-family: 'Ubuntu', sans-serif; /* fuente ubuntu */
+	font-size:10px; /* tamaño de la letra */
+	background:rgba(255,255,255,0.5);  /* transparencia */
+	border:1px dotted white; /* 1 pixel de borde punteado (dotted) blanco */
+	box-shadow:0px 0px 5px rgba(0,0,0,0.5); /* sombra */
+	-webkit-box-shadow:0px 0px 5px rgba(0,0,0,0.5); /* compatibilidad webkit */
+	-o-box-shadow:0px 0px 5px rgba(0,0,0,0.5); /* compatibilidad opera */
+	-moz-box-shadow:0px 0px 5px rgba(0,0,0,0.5); /* compatibilidad mozilla */
+	border-radius:0px 5px 0px 5px; /* borde redondeado */
+	-webkit-border-radius:0px 5px 0px 5px;  /* compatibilidad con webkit */
+	-o-border-radius:0px 5px 0px 5px;  /* compatibilidad opera */
+	-moz-border-radius:0px 5px 0px 5px; /* compatibilidad mozilla */
+	}
+
+
+	
